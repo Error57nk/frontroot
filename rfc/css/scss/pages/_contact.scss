@@ -1,0 +1,72 @@
+.con-banner {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & > div {
+    h2 {
+      color: $p-orange;
+      font-weight: 700;
+      text-shadow: 1px 1px rgba(17, 17, 17, 0.829);
+    }
+    p {
+      font-size: 14px;
+      text-align: center;
+      cursor: pointer;
+      a {
+        color: #ccc;
+        font-weight: 600;
+        letter-spacing: 2px;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.cbx-2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  &__it {
+    min-width: 300px;
+    flex: 1;
+    h2 {
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    ul {
+      padding-left: 0;
+      list-style: none;
+      .cont-cd {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        .lgo {
+          height: 70px;
+          width: 70px;
+          border-radius: 50%;
+          background-color: $p-orange;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: inset 2px 3px $txt-white;
+          margin: 10px;
+          i {
+            font-size: 35px;
+          }
+        }
+        .con {
+          li,
+          p {
+            color: #ccc;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}

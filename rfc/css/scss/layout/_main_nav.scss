@@ -1,0 +1,64 @@
+.mnav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.14);
+  padding: 15px 25px;
+  z-index: 99;
+  &__nav {
+    position: relative;
+    button {
+      background: transparent;
+      border: none;
+
+      &:hover ~ span {
+        margin-left: 10px;
+        display: inline-block;
+      }
+    }
+    span {
+      color: $txt-white;
+      display: none;
+      border: 1px solid $txt-white;
+      padding: 3px 7px;
+      position: absolute;
+    }
+  }
+  &__brand {
+    // &:hover .bd-1 {
+    //   display: none;
+    // }
+    // &:hover .bd-2 {
+    //   display: block;
+    // }
+    display: block;
+    position: relative;
+    h2 {
+      white-space: nowrap;
+      font-size: 30px;
+      margin-bottom: 0px !important;
+      line-height: 24px;
+      font-weight: 700;
+      text-shadow: 0 0 2px #ccc;
+      text-shadow: 1px 1px 7px #000;
+      color: $p-orange;
+      cursor: pointer;
+      span {
+        display: inline-block;
+        text-transform: lowercase;
+        color: $txt-white;
+        overflow: hidden;
+        opacity: 1;
+
+        transition: opacity 0.3s;
+      }
+      &:hover span {
+        opacity: 0;
+      }
+    }
+  }
+}

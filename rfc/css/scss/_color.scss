@@ -1,0 +1,31 @@
+$primary-1: rgb(32, 212, 9);
+$primary-2: rgb(63, 177, 10);
+// $primary-bg: #fff;
+$primary-bg: #0a0a0a;
+
+// $p-orange: $primary-2;
+$p-orange: #f36100;
+$p-orange1: #ffc107;
+$primary-orange: $p-orange;
+$primary-orange1: $p-orange1;
+
+$txt-white: #fff;
+$txt-light: #ccc;
+$txt-dark: #333;
+
+// Light-version
+// $sec-bg: #ffff;
+// $sec-bg-alt: #cccccc3d;
+
+// Dark Version
+$sec-bg: #0a0a0a;
+$sec-bg-alt: #181717;
+
+.bg-p {
+  background-color: $p-orange !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+}
+.p-hr {
+  border-color: $p-orange;
+}

@@ -1,0 +1,149 @@
+.wtlo-bx {
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  .wtlo-bx::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    background-color: rgba(105, 43, 2, 0.904);
+    background-image: url(../images/tree-struct.png);
+    // background: #fff;
+    background-size: contain;
+    background-repeat: repeat-y;
+    top: 40px;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__it {
+    margin-bottom: 20px;
+    &__top {
+      display: flex;
+      justify-items: center;
+      gap: 20px;
+      & > div {
+        flex: 1;
+      }
+    }
+    &__bt {
+      margin-top: 20px;
+      h2 {
+        color: $p-orange;
+        font-size: 25px;
+      }
+      p {
+        color: $txt-light;
+      }
+    }
+  }
+}
+
+.rs_it {
+  position: relative;
+  z-index: 3;
+  &__im1,
+  &__im2 {
+    filter: grayscale(1);
+    border: 5px solid #fff;
+    cursor: pointer;
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+  &__im1 {
+    &:hover ~ .rs_it__mld .af {
+      animation: arr-bf 0.3s ease-in-out infinite;
+    }
+    &:hover ~ .rs_it__mld .bf {
+      filter: grayscale(1);
+    }
+    &:hover ~ .rs_it__im2 {
+      filter: grayscale(0);
+    }
+  }
+  &__im2 {
+    border-color: gold;
+  }
+  &__mld {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h2 {
+      font-size: 40px;
+      font-weight: 800;
+      color: $p-orange;
+      margin-bottom: 0;
+      letter-spacing: 5px;
+    }
+    p {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+    .af,
+    .bf {
+      width: 300px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      cursor: pointer;
+    }
+    .bf {
+      background-color: yellow;
+      justify-content: end;
+      clip-path: polygon(
+        40% 0%,
+        40% 20%,
+        100% 20%,
+        100% 80%,
+        40% 80%,
+        40% 100%,
+        0% 50%
+      );
+      &:hover {
+        animation: arr-bf 0.3s ease-in-out infinite;
+      }
+    }
+    .af {
+      background-color: pink;
+      clip-path: polygon(
+        0% 20%,
+        60% 20%,
+        60% 0%,
+        100% 50%,
+        60% 100%,
+        60% 80%,
+        0% 80%
+      );
+      &:hover {
+        animation: arr-af 0.3s ease-in-out infinite;
+      }
+    }
+  }
+}
+
+@keyframes arr-bf {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: -20px;
+  }
+  100% {
+    margin-left: 20px;
+  }
+}
+@keyframes arr-af {
+  0% {
+    margin-right: 0;
+  }
+  50% {
+    margin-right: -20px;
+  }
+  100% {
+    margin-right: 20px;
+  }
+}

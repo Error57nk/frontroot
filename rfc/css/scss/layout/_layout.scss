@@ -1,0 +1,67 @@
+.nsec {
+  max-width: 1320px;
+  margin: 0px auto;
+  padding: 80px 30px;
+  background-color: $sec-bg;
+  &:nth-child(odd) {
+    background-color: $sec-bg-alt;
+  }
+}
+.nsec-w {
+  max-width: 1320px;
+  margin: 0px auto;
+  padding: 80px 30px;
+  background-color: $txt-white;
+  &:nth-child(odd) {
+    background-color: rgba($txt-white, 0.95);
+  }
+}
+.nsec-sm {
+  max-width: 1220px;
+  margin: 0px auto;
+  padding: 40px 30px;
+}
+@media (min-width: 576px) {
+  .nsec-sm {
+    max-width: 100%;
+    margin: 0px auto;
+    padding: 40px 30px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .nsec-sm {
+    max-width: 720px;
+    margin: 0px auto;
+    padding: 40px 30px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .nsec-sm {
+    max-width: 960px;
+    margin: 0px auto;
+    padding: 40px 30px;
+  }
+}
+
+.npar-sec {
+  position: relative;
+  padding: 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: darken;
+  .nparl {
+    position: relative;
+    z-index: 3;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(54, 54, 54, 0.42);
+  }
+}

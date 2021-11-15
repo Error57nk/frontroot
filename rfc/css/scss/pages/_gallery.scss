@@ -1,0 +1,67 @@
+.evnt-list {
+  ul {
+    list-style: none;
+    padding-left: 0;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    li {
+      border: 1px solid $txt-white;
+      padding: 5px 10px;
+      a {
+        white-space: nowrap;
+      }
+    }
+  }
+}
+.gd-gal {
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  // gap: 15px;
+  // @include media("phone") {
+  //   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  //   gap: 10px;
+  // }
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 220px;
+  gap: 10px;
+  &_it {
+    // background-image: url("../images/banner/b4.png");
+    background-image: url("../images/pp.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    flex: 1;
+    min-height: 220px;
+    min-width: 220px;
+    background-color: $txt-white;
+    position: relative;
+
+    transition: transform 0.2s ease-in;
+    @include media("phone") {
+      min-height: 150px;
+      min-width: 150px;
+    }
+    &__ld {
+      position: absolute;
+      bottom: 0;
+      left: 10px;
+      right: 10px;
+      text-align: center;
+      visibility: hidden;
+      background-color: rgba(204, 204, 204, 0.603);
+      padding: 10px;
+      border: 1px solid $p-orange;
+    }
+    &:hover {
+      transform: scale(1.1);
+      filter: grayscale(70%);
+      z-index: 99;
+    }
+    &:hover &__ld {
+      visibility: visible;
+    }
+  }
+}

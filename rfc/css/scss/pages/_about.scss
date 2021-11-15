@@ -1,0 +1,58 @@
+.abbx-2 {
+  display: flex;
+  gap: 20px;
+  & > div {
+    flex: 1;
+  }
+  .abt-img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .abt-ld {
+    padding: 0 20px;
+    h6 {
+      color: $p-orange;
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+    }
+    p {
+      color: #ccc;
+    }
+  }
+}
+
+.slid-abt {
+  margin-top: 20px;
+  margin-bottom: -20px;
+  & .slick-prev::before,
+  & .slick-next::before {
+    color: $p-orange !important;
+  }
+  .nof-it {
+    height: 100px;
+    width: 100px;
+    &__ld {
+      background-color: $p-orange;
+      position: static;
+      padding: 10px;
+      box-shadow: inset 0px 0px 5px 12px rgb(9, 224, 206);
+      &::before {
+        background-color: $txt-white;
+      }
+      h4 {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 0;
+        @include media("phone") {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .nof-it:hover .nof-it__ld {
+    height: inherit;
+  }
+}
